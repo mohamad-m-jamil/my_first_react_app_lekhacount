@@ -22,11 +22,30 @@ function App() {
   const handleScoreChange = (e, index) => {
     if (gameEnded) return;
 
-    const newScore = parseInt(e.target.value) || 0;
-    let newScores = [...scores];
-    newScores[index] += newScore;
+    const newScore = parseInt(e.target.value, 10) || 0; // Parse input as a number
+    const newScores = [...scores]; // Copy the scores array
+    newScores[index] = newScore; // Update only the score for the current player
+    setScores(newScores); // Update the state
+
+    // Check if any player exceeds 200 points
+    if (newScores[index] > 200) {
+      setGameEnded(true);
+      alert(`${names[index]} has exceeded 200 points! Game Over.`);
+    }
+  };
+
+  const handleAddScore = (index) => {
+    const inputScore = parseInt(scoreInputs.current[index]?.value, 10) || 0; // Parse input value
+    const newScores = [...scores];
+    newScores[index] += inputScore; // Add the score to the current total
     setScores(newScores);
 
+    // Reset the input field
+    if (scoreInputs.current[index]) {
+      scoreInputs.current[index].value = '';
+    }
+
+    // Check if the player exceeds 200 points
     if (newScores[index] > 200) {
       setGameEnded(true);
       alert(`${names[index]} has exceeded 200 points! Game Over.`);
@@ -35,10 +54,10 @@ function App() {
 
   const handleNewRound = () => {
     if (gameEnded) return;
-    
-    // Reset input fields to null (empty)
+
+    // Reset input fields to empty
     scoreInputs.current.forEach((input) => {
-      input.value = '';
+      if (input) input.value = '';
     });
 
     setRounds(rounds + 1);
@@ -51,10 +70,10 @@ function App() {
   };
 
   const determineWinnerLoser = () => {
-    let minScore = Math.min(...scores);
-    let maxScore = Math.max(...scores);
-    let winner = names[scores.indexOf(minScore)];
-    let loser = names[scores.indexOf(maxScore)];
+    const minScore = Math.min(...scores);
+    const maxScore = Math.max(...scores);
+    const winner = names[scores.indexOf(minScore)];
+    const loser = names[scores.indexOf(maxScore)];
     return { winner, loser };
   };
 
@@ -77,13 +96,13 @@ function App() {
           <input type="text" id="player4" placeholder="Player 4" />
           <button
             onClick={() => {
-              const names = [
+              const submittedNames = [
                 document.getElementById('player1').value,
                 document.getElementById('player2').value,
                 document.getElementById('player3').value,
                 document.getElementById('player4').value,
               ];
-              handleNamesSubmit(names);
+              handleNamesSubmit(submittedNames);
             }}
           >
             Start Game
@@ -100,9 +119,9 @@ function App() {
                 <input
                   type="number"
                   placeholder="Enter score"
-                  onChange={(e) => handleScoreChange(e, index)}
-                  ref={(el) => scoreInputs.current[index] = el} // Assign input ref
+                  ref={(el) => (scoreInputs.current[index] = el)} // Assign input ref
                 />
+                <button onClick={() => handleAddScore(index)}>Add Score</button>
               </div>
             ))}
           </div>
