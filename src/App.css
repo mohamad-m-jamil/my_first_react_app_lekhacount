@@ -1,0 +1,209 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('../public/images/i.jpg'); /* Path relative to public folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+/* App container */
+.app {
+  text-align: center;
+  padding: 20px;
+  color: rgb(178, 178, 178);
+}
+
+/* Hide the number input arrows */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* Styles for the name input and buttons */
+.name-input input {
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Button Styles */
+button:hover {
+  opacity: 0.8;
+}
+
+button.next {
+  background-color: #4caf50; /* Green for next round */
+}
+
+button.end {
+  background-color: #f44336; /* Red for end game */
+}
+
+button.restart {
+  background-color: #2196f3; /* Blue for restart */
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.game {
+  margin-top: 20px;
+}
+
+.players {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+input[type="number"] {
+  margin: 10px;
+  padding: 5px;
+  width: 100px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('../public/images/i.jpg'); /* Corrected path */
+  background-size: cover; /* Ensure the image covers the full screen */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  height: 100vh; /* Make sure the background covers the full height of the viewport */
+  margin: 0;
+}
+
+/* App container */
+.app {
+  text-align: center;
+  padding: 20px;
+  color: rgb(217, 210, 210);
+  position: absolute; /* To position over the background image */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the content */
+}
+
+/* Hide the number input arrows */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* Styles for the name input and buttons */
+.name-input input {
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Button Styles */
+button:hover {
+  opacity: 0.8;
+}
+
+button.next {
+  background-color: #4caf50; /* Green for next round */
+}
+
+button.end {
+  background-color: #f44336; /* Red for end game */
+}
+
+button.restart {
+  background-color: #2196f3; /* Blue for restart */
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.game {
+  margin-top: 20px;
+}
+
+.players {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+input[type="number"] {
+  margin: 10px;
+  padding: 5px;
+  width: 100px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
