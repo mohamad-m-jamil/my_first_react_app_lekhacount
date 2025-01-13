@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/my_first_react_app_lekhacount/static/css/main.642f5f81.css",
+    "main.js": "/my_first_react_app_lekhacount/static/js/main.96f2218d.js",
+    "static/js/488.26064d8f.chunk.js": "/my_first_react_app_lekhacount/static/js/488.26064d8f.chunk.js",
+    "static/media/i.jpg": "/my_first_react_app_lekhacount/static/media/i.84754518a5d5f8e803ee.jpg",
+    "index.html": "/my_first_react_app_lekhacount/index.html",
+    "main.642f5f81.css.map": "/my_first_react_app_lekhacount/static/css/main.642f5f81.css.map",
+    "main.96f2218d.js.map": "/my_first_react_app_lekhacount/static/js/main.96f2218d.js.map",
+    "488.26064d8f.chunk.js.map": "/my_first_react_app_lekhacount/static/js/488.26064d8f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.642f5f81.css",
+    "static/js/main.96f2218d.js"
+  ]
+}
