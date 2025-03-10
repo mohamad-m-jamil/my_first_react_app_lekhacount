@@ -9,7 +9,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [[http://localhost:3000](http://localhost:3000)](https://mohamad-m-jamil.github.io/my_first_react_app_lekhacount/) to view it in your browser.
+Open (https://mohamad-m-jamil.github.io/my_first_react_app_lekhacount/) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
